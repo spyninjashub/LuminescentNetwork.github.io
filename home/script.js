@@ -1,6 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".carousel");
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.navbar .hamburger');
+    const dropdown = document.querySelector('.navbar .dropdown');
     
-    // Duplicate images for infinite looping
-    carousel.innerHTML += carousel.innerHTML;
+    // Toggle dropdown visibility when hamburger is clicked
+    hamburger.addEventListener('click', function() {
+        dropdown.classList.toggle('active');
+    });
 });
