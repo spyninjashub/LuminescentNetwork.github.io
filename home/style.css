@@ -333,6 +333,9 @@ audio {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        position: relative;
+        z-index: 9999;
+        margin-top: 20px; /* Added margin-top to ensure it's above the header */
     }
 
     .navbar a {
@@ -373,5 +376,10 @@ audio {
 
     .download-item {
         width: 80%;
+    }
+
+    /* Ensuring no overlap of the header and scrolling carousel */
+    header {
+        margin-top: 100px; /* Ensure enough space for the navbar */
     }
 }
