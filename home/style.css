@@ -326,3 +326,52 @@ audio {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .discord-page {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .discord-invite-btn {
+        width: 100%;
+        padding: 40px 70px;
+    }
+
+    .staff-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-member {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .downloads-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-item {
+        width: 80%;
+    }
+}
