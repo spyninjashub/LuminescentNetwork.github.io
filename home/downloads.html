@@ -58,6 +58,33 @@
         .show {
             display: block;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                position: relative;
+                z-index: 9999;
+                margin-top: 20px; /* Added margin-top to ensure it's above the header */
+            }
+
+            /* Hide all nav links by default on mobile */
+            .navbar a {
+                display: none;
+            }
+
+            /* Show the hamburger icon */
+            .navbar .dropdown button {
+                display: block;
+            }
+
+            /* Mobile dropdown visible when active */
+            .navbar .dropdown-content.show {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
