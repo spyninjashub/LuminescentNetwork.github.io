@@ -387,3 +387,6 @@ audio {
     transform: translateY(2px); /* Slight depression effect */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Reduced shadow */
 }
+
+@font-face { font-family: mcpe; src: url('MinecraftRegular-Bmg3.ttf'); } 
+      
