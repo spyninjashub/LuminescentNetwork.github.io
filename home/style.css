@@ -40,6 +40,7 @@ body {
     justify-content: center;
     gap: 20px;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .navbar a {
@@ -382,9 +383,16 @@ audio {
         display: block;
     }
 
-    /* Show dropdown when active */
+    /* When the dropdown is active, show it */
     .navbar .dropdown.active {
         display: block;
+    }
+
+    /* Only show the dropdown menu on mobile when active */
+    .navbar .dropdown {
+        display: none;
+        width: 100%;
+        text-align: center;
     }
 
     /* Adjusting header */
