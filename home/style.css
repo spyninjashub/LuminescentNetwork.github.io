@@ -329,6 +329,7 @@ audio {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    /* Mobile Navbar Adjustment */
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -340,22 +341,11 @@ audio {
         margin: 5px 0;
     }
 
-    .discord-page {
-        flex-direction: column;
-        padding: 20px 10px;
+    .navbar a:not(:first-child) {
+        display: none; /* Hide all links except Home */
     }
 
-    .left-side, .right-side {
-        flex: none;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .discord-invite-btn {
-        width: 100%;
-        padding: 40px 70px;
-    }
-
+    /* Staff Section */
     .staff-container {
         flex-direction: column;
         align-items: center;
@@ -366,6 +356,7 @@ audio {
         margin-bottom: 20px;
     }
 
+    /* Downloads Section */
     .downloads-list {
         flex-direction: column;
         align-items: center;
