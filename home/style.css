@@ -55,34 +55,6 @@ body {
     border-radius: 5px;
 }
 
-/* Dropdown menu hidden by default */
-.navbar .dropdown {
-    display: none;
-    position: absolute;
-    top: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    text-align: center;
-}
-
-.navbar .dropdown a {
-    padding: 15px;
-    display: block;
-    color: white;
-}
-
-.navbar .dropdown a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Hamburger menu for mobile */
-.navbar .hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
 /* Header Image */
 header {
     margin-top: 80px;
@@ -158,7 +130,7 @@ header img {
 .staff-member img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 50%; /* Restores circular shape */
     margin-bottom: 10px;
 }
 
@@ -185,22 +157,22 @@ header img {
     top: 100%;
     left: 100%;
     opacity: 1;
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.2); /* Rotate and slightly zoom the shimmer */
 }
 
 /* Staff box hover effect: make the box get bigger */
 .staff-member:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1); /* Slightly enlarge the box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
 }
 
 /* Staff Name Colors */
-.staff-member:nth-child(1) p { color: #007BFF; }
-.staff-member:nth-child(2) p { color: cyan; }
-.staff-member:nth-child(3) p { color: #8E44AD; }
-.staff-member:nth-child(4) p { color: #9B4DE2; }
-.staff-member:nth-child(5) p { color: #C678DD; }
-.staff-member:nth-child(6) p { color: #50C878; }
+.staff-member:nth-child(1) p { color: #007BFF; } /* Ewoker17 (Blue) */
+.staff-member:nth-child(2) p { color: cyan; } /* OrcaFunny (Cyan) */
+.staff-member:nth-child(3) p { color: #8E44AD; } /* Ignitemare (Purple) */
+.staff-member:nth-child(4) p { color: #9B4DE2; } /* jj_boi (Purple) */
+.staff-member:nth-child(5) p { color: #C678DD; } /* chillarealone (Pink) */
+.staff-member:nth-child(6) p { color: #50C878; } /* Retroverse (Light Green) */
 
 /* Staff Name */
 .staff-member p {
@@ -361,46 +333,45 @@ audio {
         flex-direction: column;
         align-items: center;
         padding: 10px;
-        position: relative;
-        z-index: 9999;
-        margin-top: 20px;
     }
 
-    /* Hide normal links on mobile */
     .navbar a {
-        display: none;
+        font-size: 16px;
+        margin: 5px 0;
     }
 
-    /* Show the hamburger icon on mobile */
-    .navbar .hamburger {
-        display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
+    .discord-page {
+        flex-direction: column;
+        padding: 20px 10px;
     }
 
-    /* Show only the dropdown on mobile when hamburger is clicked */
-    .navbar .dropdown {
-        display: block !important;
-        text-align: center;
+    .left-side, .right-side {
+        flex: none;
         width: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        margin-bottom: 20px;
     }
 
-    /* Adjusting header */
-    header {
-        margin-top: 100px;
-    }
-}
-
-/* PC and Larger Devices */
-@media (min-width: 769px) {
-    .navbar .dropdown {
-        display: none; /* Hide the dropdown menu on desktop */
+    .discord-invite-btn {
+        width: 100%;
+        padding: 40px 70px;
     }
 
-    /* Show normal links on larger devices */
-    .navbar a {
-        display: inline-block;
+    .staff-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-member {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .downloads-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-item {
+        width: 80%;
     }
 }
