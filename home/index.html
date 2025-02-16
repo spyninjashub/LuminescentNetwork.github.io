@@ -59,31 +59,32 @@
             display: block;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                padding: 10px;
-                position: relative;
-                z-index: 9999;
-                margin-top: 20px; /* Added margin-top to ensure it's above the header */
-            }
+        /* Join Realm Button */
+        .join-realm-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-image: url('portl.gif');
+     /**       background: linear-gradient(135deg, #9b4de2, #7c38b6); **/ /* Purple gradient */
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
 
-            /* Hide all nav links by default on mobile */
-            .navbar a {
-                display: none;
-            }
+        .join-realm-btn:hover {
+            background-image: url('portl.gif');
+        /**    background: linear-gradient(135deg, #8b42c1, #6e2f9f); **/ /* Darker purple */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(144, 0, 255, 0.614);
+        }
 
-            /* Show the hamburger icon */
-            .navbar .dropdown button {
-                display: block;
-            }
-
-            /* Mobile dropdown visible when active */
-            .navbar .dropdown-content.show {
-                display: block;
-            }
+        .join-realm-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 10px rgb(149, 0, 255);
         }
     </style>
 </head>
@@ -93,7 +94,7 @@
         <a href="index.html">Home</a>
         <a href="downloads.html" class="button">Go to Downloads</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_M8TPysEcmyGIYTqtLuSY80REuboMwj4nB9t4JenSgTZAIQ/viewform">Apply</a>
-        <a href="discord.html">Discord</a>
+        <a href="discord.html">Discord</a> 
 
         <!-- Dropdown Menu -->
         <div class="dropdown">
