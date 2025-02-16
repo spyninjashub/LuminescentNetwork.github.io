@@ -55,7 +55,7 @@ body {
     border-radius: 5px;
 }
 
-/* Dropdown menu hidden by default */
+/* Dropdown menu for PC */
 .navbar .dropdown {
     display: none;
     position: absolute;
@@ -73,6 +73,11 @@ body {
 
 .navbar .dropdown a:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+/* Show dropdown on hover for PC */
+.navbar:hover .dropdown {
+    display: block;
 }
 
 /* Hamburger menu for mobile */
@@ -369,11 +374,7 @@ audio {
     .navbar a {
         font-size: 16px;
         margin: 5px 0;
-    }
-
-    /* Hide normal links on mobile */
-    .navbar a {
-        display: none;
+        display: none; /* Hide normal links on mobile */
     }
 
     /* Show the hamburger icon */
@@ -381,7 +382,7 @@ audio {
         display: block;
     }
 
-    /* Mobile dropdown visible when active */
+    /* Show dropdown when active */
     .navbar .dropdown.active {
         display: block;
     }
