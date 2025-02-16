@@ -1,30 +1,31 @@
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('font.otf') format('opentype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'MinecraftTen', Arial, sans-serif;
 }
 
 /* Hide Scrollbars but allow scrolling */
 html, body {
-    height: 100%; /* Ensure full height */
-    overflow: auto; /* Allow scrolling */
+    height: 100%;
+    overflow: auto;
 }
 
 body {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 0 20px; /* Added padding to prevent content from touching the edges */
+    padding: 0 20px;
 }
 
 /* Hide the scrollbar */
 ::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-}
-
-::-webkit-scrollbar-thumb {
-    background: transparent; /* Optional: hides the scroll thumb */
+    display: none;
 }
 
 /* Sticky Transparent Navbar */
@@ -32,13 +33,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(30, 30, 30, 0.7); /* Semi-transparent */
+    background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(10px);
     padding: 15px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    z-index: 1000; /* Ensure navbar is in front of all other content */
+    z-index: 1000;
 }
 
 .navbar a {
@@ -56,7 +57,7 @@ body {
 
 /* Header Image */
 header {
-    margin-top: 80px; /* Push content below navbar */
+    margin-top: 80px;
 }
 
 header img {
@@ -73,8 +74,8 @@ header img {
 
 .carousel {
     display: flex;
-    width: 400%; /* Four images side by side */
-    animation: scroll 20s infinite linear; /* Animation to scroll the carousel */
+    width: 400%;
+    animation: scroll 20s infinite linear;
 }
 
 .carousel img {
@@ -83,16 +84,16 @@ header img {
     object-fit: cover;
 }
 
-/* Infinite scrolling animation with 5-second pause per image */
+/* Infinite scrolling animation */
 @keyframes scroll {
-    0% { transform: translateX(0); } /* Start at the first image */
-    25% { transform: translateX(0); } /* First image pause */
-    30% { transform: translateX(-100vw); } /* Move to second image */
-    55% { transform: translateX(-100vw); } /* Second image pause */
-    60% { transform: translateX(-200vw); } /* Move to third image */
-    85% { transform: translateX(-200vw); } /* Third image pause */
-    90% { transform: translateX(-300vw); } /* Move to fourth image */
-    100% { transform: translateX(-300vw); } /* Fourth image pause */
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    30% { transform: translateX(-100vw); }
+    55% { transform: translateX(-100vw); }
+    60% { transform: translateX(-200vw); }
+    85% { transform: translateX(-200vw); }
+    90% { transform: translateX(-300vw); }
+    100% { transform: translateX(-300vw); }
 }
 
 /* Our Staff Section */
@@ -125,7 +126,15 @@ header img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Shimmer Effect */
+/* Ensure all staff profile pictures are circular */
+.staff-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Restores circular shape */
+    margin-bottom: 10px;
+}
+
+/* Enhanced shimmer effect */
 .staff-member::before {
     content: "";
     position: absolute;
@@ -136,48 +145,42 @@ header img {
     background: linear-gradient(
         120deg,
         transparent 30%,
-        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.4) 50%,
         transparent 70%
     );
     transform: rotate(30deg);
-    transition: 0.5s;
+    transition: all 0.5s ease;
     opacity: 0;
-}
-
-.staff-member:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 .staff-member:hover::before {
     top: 100%;
     left: 100%;
     opacity: 1;
+    transform: rotate(45deg) scale(1.2); /* Rotate and slightly zoom the shimmer */
 }
 
-/* Staff Images */
-.staff-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+/* Staff box hover effect: make the box get bigger */
+.staff-member:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
 }
 
-/* Staff Name - Normal text color */
-.staff-member p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff; /* Simple white text */
-}
-
-/* Individual Staff Names (No Gradient) */
+/* Staff Name Colors */
 .staff-member:nth-child(1) p { color: #007BFF; } /* Ewoker17 (Blue) */
-.staff-member:nth-child(2) p { color: cyan; } /* OrcaFunny (Blue) */
+.staff-member:nth-child(2) p { color: cyan; } /* OrcaFunny (Cyan) */
 .staff-member:nth-child(3) p { color: #8E44AD; } /* Ignitemare (Purple) */
 .staff-member:nth-child(4) p { color: #9B4DE2; } /* jj_boi (Purple) */
 .staff-member:nth-child(5) p { color: #C678DD; } /* chillarealone (Pink) */
+.staff-member:nth-child(6) p { color: #50C878; } /* Retroverse (Light Green) */
 
-/* Staff Role */
+/* Staff Name */
+.staff-member p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
 .staff-member span {
     display: block;
     font-size: 14px;
@@ -203,13 +206,12 @@ header img {
 .discord-page {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px; /* Added more padding for space */
+    padding: 40px 20px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    background: linear-gradient(rgba(26, 26, 26, 1), rgba(26, 26, 26, 0.8)), url('5.png') center/cover no-repeat; /* Gradient with blurred 5.png */
+    flex-wrap: wrap;
+    background: linear-gradient(rgba(26, 26, 26, 1), rgba(26, 26, 26, 0.8)), url('5.png') center/cover no-repeat;
     background-size: cover;
     min-height: 100vh;
-    filter: blur(0px); /* Optional blur effect */
 }
 
 /* Left Side (Reason to Join) */
@@ -217,76 +219,60 @@ header img {
     flex: 1;
     padding-right: 20px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    margin-right: 20px; /* Space between the text box and the button */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
 }
 
 /* Right Side (Discord Invite Button) */
 .right-side {
     flex: 1;
     display: flex;
-    justify-content: flex-start; /* Align the button towards the left */
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 20px; /* Space between the invite button and the image */
-    margin-left: 20px; /* Add space between the invite button and the left section */
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 /* Discord Invite Button */
 .discord-invite-btn {
     display: inline-block;
-    padding: 50px 80px; /* Even larger padding for a bigger button */
-    background-color: #7289DA; /* Discord Blue */
+    padding: 50px 80px;
+    background-color: #7289DA;
     color: white;
-    font-size: 32px; /* Significantly larger font size */
+    font-size: 32px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 15px; /* More rounded corners */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow effect */
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px; /* Wider button */
-    height: 120px; /* Taller button */
+    width: 500px;
+    height: 120px;
     position: relative;
     overflow: hidden;
 }
 
 .discord-invite-btn:hover {
-    background-color: #5c6bc0; /* Darker shade on hover */
-    transform: translateY(-5px) scale(1.1); /* Slight lift and scaling effect */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow effect */
+    background-color: #5c6bc0;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 .discord-invite-btn:active {
-    background-color: #4a5bb4; /* Even darker shade on click */
-    transform: translateY(3px) scale(1); /* Slight depression effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Slightly reduced shadow */
+    background-color: #4a5bb4;
+    transform: translateY(3px) scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .discord-invite-btn img {
-    margin-right: 25px; /* Larger space between the logo and text */
-    width: 50px; /* Larger logo */
-    border-radius: 10px; /* Rounded corners for the image */
-}
-
-/* Discord Invite Banner */
-.discord-invite-banner {
-    width: 100%;
-    height: 120px;
-    background-image: url('ln.png'); /* Add ln.png as the banner */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 20px;
-}
-
-/* Remove the Discord Image Element */
-.discord-image {
-    display: none; /* No longer display image */
+    margin-right: 25px;
+    width: 50px;
+    border-radius: 10px;
 }
 
 /* Footer */
@@ -340,53 +326,3 @@ audio {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
-
-.download-item img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-}
-
-.download-item a {
-    display: block;
-    background-color: #7289DA;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-item a:hover {
-    background-color: #5c6bc0;
-}
-
-/* Improved Download Void World Button */
-.download-btn-void-world {
-    display: inline-block;
-    padding: 20px 50px;
-    background: linear-gradient(135deg, #9b4de2, #7c38b6); /* Purple gradient */
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    transition: all 0.3s ease;
-}
-
-.download-btn-void-world:hover {
-    background: linear-gradient(135deg, #9b4de2, #7c38b6); /* Maintain purple gradient on hover */
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
-}
-
-.download-btn-void-world:active {
-    background: linear-gradient(135deg, #8b42c1, #6e2f9f); /* Darker purple gradient on click */
-    transform: translateY(2px); /* Slight depression effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Reduced shadow */
-}
-
-@font-face { font-family: mcpe; src: url('MinecraftRegular-Bmg3.ttf'); } 
-      
