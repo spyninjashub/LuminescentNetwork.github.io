@@ -95,6 +95,102 @@ header img {
     100% { transform: translateX(-300vw); } /* Fourth image pause */
 }
 
+/* Our Staff Section */
+.staff-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.staff-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.staff-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shimmer Effect */
+.staff-member::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 70%
+    );
+    transform: rotate(30deg);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.staff-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.staff-member:hover::before {
+    top: 100%;
+    left: 100%;
+    opacity: 1;
+}
+
+/* Staff Images */
+.staff-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Staff Name */
+.staff-member p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Staff Role */
+.staff-member span {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Special Tag for Website Creator */
+.staff-member.creator {
+    border: 2px solid gold;
+    box-shadow: 0 0 15px gold;
+}
+
+.staff-member.creator::after {
+    content: "Website Creator";
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 5px;
+}
+
 /* Discord Page Layout */
 .discord-page {
     display: flex;
@@ -195,4 +291,91 @@ footer {
 /* Hide audio element */
 audio {
     display: none;
+}
+
+/* Downloads Page Styles */
+.downloads-page {
+    background: #111;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.downloads-page h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.downloads-page p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.downloads-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.download-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.download-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.download-item a {
+    display: block;
+    background-color: #7289DA;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-item a:hover {
+    background-color: #5c6bc0;
+}
+
+/* Improved Download Void World Button */
+.download-btn-void-world {
+    display: inline-block;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #9b4de2, #7c38b6); /* Purple gradient */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: all 0.3s ease;
+}
+
+.download-btn-void-world:hover {
+    background: linear-gradient(135deg, #9b4de2, #7c38b6); /* Maintain purple gradient on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.download-btn-void-world:active {
+    background: linear-gradient(135deg, #8b42c1, #6e2f9f); /* Darker purple gradient on click */
+    transform: translateY(2px); /* Slight depression effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
 }
