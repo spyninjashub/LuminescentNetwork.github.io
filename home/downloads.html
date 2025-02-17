@@ -12,27 +12,28 @@
     }
   </script>
   <style>
-    /* Additional styling for the download button with a more zoomed-out GIF */
+    /* Download Button with a More Zoomed-Out GIF */
     .download-btn-void-world {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 15px 30px;
       text-align: center;
       background-image: url('portl.gif');
-      background-size: 150%;  /* Adjusted zoom level */
+      background-size: 120%; /* Adjusted zoom level */
       background-position: center;
       background-repeat: no-repeat;
       color: white;
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
-    /* Shimmer effect on hover */
+    /* Shimmer Effect on Hover */
     .download-btn-void-world:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 20px rgba(144, 0, 255, 0.614);
     }
 
     /* Dropdown Menu Styles from index.html */
@@ -82,13 +83,14 @@
       display: block;
     }
 
-    /* Footer Styles from index.html */
+    /* Exact Footer Styles from index.html */
     footer {
-      background-color: #222;
+      background-color: rgba(30, 30, 30, 0.9);
       color: white;
       padding: 20px;
       text-align: center;
-      margin-top: 30px;
+      font-size: 16px;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     footer p {
@@ -105,7 +107,6 @@
     footer a:hover {
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
@@ -146,7 +147,7 @@
     <source src="nptg.mp3" type="audio/mp3">
   </audio>
 
-  <!-- Footer Section -->
+  <!-- Footer Section (Same as index.html) -->
   <footer>
     <p>Luminescent Network &copy; 2025</p>
   </footer>
