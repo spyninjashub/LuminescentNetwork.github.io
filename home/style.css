@@ -10,7 +10,6 @@
     font-family: 'MinecraftTen', Arial, sans-serif;
 }
 
-/* Hide Scrollbars but allow scrolling */
 html, body {
     height: 100%;
     overflow: auto;
@@ -23,12 +22,10 @@ body {
     padding: 0 20px;
 }
 
-/* Hide the scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Sticky Transparent Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -55,7 +52,6 @@ body {
     border-radius: 5px;
 }
 
-/* Dropdown Menu Styling */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -105,7 +101,6 @@ body {
     display: block;
 }
 
-/* Header Image */
 header {
     margin-top: 80px;
 }
@@ -115,7 +110,6 @@ header img {
     height: auto;
 }
 
-/* Carousel Styling */
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -134,7 +128,6 @@ header img {
     object-fit: cover;
 }
 
-/* Infinite scrolling animation */
 @keyframes scroll {
     0% { transform: translateX(0); }
     25% { transform: translateX(0); }
@@ -176,15 +169,15 @@ header img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ensure all staff profile pictures are circular */
+
 .staff-member img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* Restores circular shape */
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
-/* Enhanced shimmer effect */
+
 .staff-member::before {
     content: "";
     position: absolute;
@@ -207,16 +200,15 @@ header img {
     top: 100%;
     left: 100%;
     opacity: 1;
-    transform: rotate(45deg) scale(1.2); /* Rotate and slightly zoom the shimmer */
+    transform: rotate(45deg) scale(1.2); 
 }
 
-/* Staff box hover effect: make the box get bigger */
+
 .staff-member:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
-}
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 
-/* Staff Name Colors */
+
 .staff-member:nth-child(1) p { color: #007BFF; } /* Ewoker17 (Blue) */
 .staff-member:nth-child(2) p { color: cyan; } /* OrcaFunny (Cyan) */
 .staff-member:nth-child(3) p { color: #8E44AD; } /* Ignitemare (Purple) */
@@ -224,7 +216,7 @@ header img {
 .staff-member:nth-child(5) p { color: #C678DD; } /* chillarealone (Pink) */
 .staff-member:nth-child(6) p { color: #50C878; } /* Retroverse (Light Green) */
 
-/* Staff Name */
+
 .staff-member p {
     font-size: 18px;
     font-weight: bold;
@@ -237,7 +229,6 @@ header img {
     color: #ccc;
 }
 
-/* Special Tag for Website Creator */
 .staff-member.creator {
     border: 2px solid gold;
     box-shadow: 0 0 15px gold;
@@ -252,7 +243,6 @@ header img {
     margin-top: 5px;
 }
 
-/* Discord Page Layout */
 .discord-page {
     display: flex;
     justify-content: space-between;
@@ -264,7 +254,6 @@ header img {
     min-height: 100vh;
 }
 
-/* Left Side (Reason to Join) */
 .left-side {
     flex: 1;
     padding-right: 20px;
@@ -276,7 +265,6 @@ header img {
     margin-right: 20px;
 }
 
-/* Right Side (Discord Invite Button) */
 .right-side {
     flex: 1;
     display: flex;
@@ -286,7 +274,6 @@ header img {
     margin-left: 20px;
 }
 
-/* Discord Invite Button */
 .discord-invite-btn {
     display: inline-block;
     padding: 50px 80px;
@@ -325,19 +312,16 @@ header img {
     border-radius: 10px;
 }
 
-/* Footer */
 footer {
     margin-top: 30px;
     padding: 20px;
     background: #0f0f0f;
 }
 
-/* Hide audio element */
 audio {
     display: none;
 }
 
-/* Downloads Page Styles */
 .downloads-page {
     background: #111;
     color: white;
@@ -355,14 +339,13 @@ audio {
     margin-bottom: 30px;
 }
 
-/* Button for Download Void World */
 .download-btn-void-world {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #9b4de2; /* Purple */
+    background-color: #9b4de2;
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -370,7 +353,7 @@ audio {
 }
 
 .download-btn-void-world:hover {
-    background-color: #7c38b6; /* Darker Purple */
+    background-color: #7c38b6;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(144, 0, 255, 0.6);
 }
@@ -380,7 +363,7 @@ audio {
     box-shadow: 0 4px 10px rgb(149, 0, 255);
 }
 
-/* Downloads List */
+
 .downloads-list {
     display: flex;
     flex-wrap: wrap;
@@ -404,6 +387,6 @@ audio {
 }
 
 ::selection {
-    background-color: purple;
+    background-color: rgba(160, 32, 240, 0.5);
     color: white;
 }
