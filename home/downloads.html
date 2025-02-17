@@ -12,13 +12,15 @@
     }
   </script>
   <style>
-    /* Additional styling for the download button */
+    /* Additional styling for the download button with a more zoomed-out GIF */
     .download-btn-void-world {
       display: inline-block;
       padding: 10px 20px;
       text-align: center;
       background-image: url('portl.gif');
-      background-size: cover;
+      background-size: 150%;  /* Adjusted zoom level */
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
       font-size: 16px;
       text-decoration: none;
@@ -31,6 +33,21 @@
     .download-btn-void-world:hover {
       transform: scale(1.1);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Dropdown Menu Styling Fix */
+    .dropdown-content {
+        position: absolute;
+        background-color: rgba(30, 30, 30, 0.9);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        display: none; /* Initially hidden */
+    }
+
+    .show {
+      display: block;
     }
   </style>
 </head>
@@ -67,5 +84,9 @@
   <!-- Button for downloading Void World -->
   <a href="https://www.mediafire.com/file/vbjzsqf0hy7p83u/Void.mcworld/file" target="_blank" class="download-btn-void-world">Download Void World</a>
 
+  <!-- Background Music -->
+  <audio loop autoplay>
+    <source src="nptg.mp3" type="audio/mp3">
+  </audio>
 </body>
 </html>
