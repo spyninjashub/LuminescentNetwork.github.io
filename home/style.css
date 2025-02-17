@@ -151,7 +151,7 @@ header img {
 
 .staff-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px;
     justify-items: center;
     margin-top: 30px;
@@ -163,7 +163,8 @@ header img {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
