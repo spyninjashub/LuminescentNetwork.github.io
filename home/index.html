@@ -11,6 +11,28 @@
             document.getElementById("dropdown-menu").classList.toggle("show");
         }
     </script>
+    <script>
+        function checkI() {
+            // Shortens Top Bar Title
+        var bar = document.getElementById("nmBar");
+// Checks if the device supports the menu bar
+if (
+        userAgent.includes("iPhone") ||
+        userAgent.includes("iPod") ||
+        userAgent.includes("iPad") 
+                            ) 
+    {
+        bar.style.visibility = "hidden";
+        console.log(
+        userAgent.includes("iPhone") ||
+        userAgent.includes("iPod") ||
+        userAgent.includes("iPad") 
+                    )
+    }
+        }
+
+
+    </script>
     <style>
         /* Dropdown Menu Styles */
         .dropdown {
@@ -88,7 +110,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="checkI"> <!-- Checks Wether To Render The Navigation Bar -->
     <!-- Sticky Navbar -->
     <nav class="navbar" id="nmBar">
         <a href="index.html">Home</a>
