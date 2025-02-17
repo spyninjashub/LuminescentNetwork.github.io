@@ -3,7 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Downloads</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Your stylesheets here -->
+  <link rel="stylesheet" href="style.css"> <!-- Corrected stylesheet link -->
+  <style>
+    /* Additional styling for the download button */
+    .download-btn-void-world {
+      display: inline-block;
+      padding: 10px 20px;
+      text-align: center;
+      background-image: url('portl.gif');
+      background-size: cover;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Shimmer effect on hover */
+    .download-btn-void-world:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar from index.html -->
@@ -30,5 +52,7 @@
   <h1>Downloads</h1>
   <p>Here you can download cool stuff!</p>
 
+  <!-- Button for downloading Void World -->
+  <a href="https://www.mediafire.com/file/vbjzsqf0hy7p83u/Void.mcworld/file" target="_blank" class="download-btn-void-world">Download Void World</a>
 </body>
 </html>
