@@ -17,18 +17,29 @@
         var bar = document.getElementById("nmBar");
 // Checks if the device supports the menu bar
 if (
-        userAgent.includes("iPhone") ||
-        userAgent.includes("iPod") ||
-        userAgent.includes("iPad") 
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPod") ||
+        navigator.userAgent.includes("Android") ||
+        navigator.userAgent.includes("BlackBerry") ||
+        navigator.userAgent.includes("Windows Phone") ||
+        navigator.userAgent.includes("Opera Mini") ||
+        navigator.userAgent.includes("Opera Mobi") 
+        
                             ) 
     {
         bar.style.visibility = "hidden";
-        console.log(
-        userAgent.includes("iPhone") ||
-        userAgent.includes("iPod") ||
-        userAgent.includes("iPad") 
-                    )
+        
     }
+    console.log(
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPod") ||
+        navigator.userAgent.includes("Android") ||
+        navigator.userAgent.includes("BlackBerry") ||
+        navigator.userAgent.includes("Windows Phone") ||
+        navigator.userAgent.includes("Opera Mini") ||
+        navigator.userAgent.includes("Opera Mobi") 
+         
+                    )
         }
 
 
