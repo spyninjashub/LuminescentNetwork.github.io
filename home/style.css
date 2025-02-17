@@ -1,4 +1,3 @@
-/* General settings */
 @font-face {
     font-family: 'MinecraftTen';
     src: url('font.otf') format('opentype');
@@ -27,7 +26,6 @@ body {
     display: none;
 }
 
-/* Navbar styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -112,7 +110,6 @@ header img {
     height: auto;
 }
 
-/* Staff Section styles */
 .staff-section {
     margin: 50px 0;
     text-align: center;
@@ -125,7 +122,7 @@ header img {
 
 .staff-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 staff boxes per row */
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     justify-items: center;
     margin-top: 30px;
@@ -188,7 +185,7 @@ header img {
 }
 
 .staff-member p.staff-name {
-    color: #ffcc00; /* Staff name color (yellow) */
+    color: #ffcc00;
 }
 
 .staff-member span {
@@ -211,20 +208,19 @@ header img {
     margin-top: 5px;
 }
 
-/* Announcement Section styles */
 .announcement-section {
     margin-top: 40px;
 }
 
 .announcement-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 announcement boxes per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
 }
 
 .announcement-box {
-    background-color: #2a2a2a; /* Dark Gray background for announcements */
+    background-color: #2a2a2a;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -254,7 +250,6 @@ header img {
     color: #ccc;
 }
 
-/* Discord Page styles */
 .discord-page {
     display: flex;
     justify-content: space-between;
