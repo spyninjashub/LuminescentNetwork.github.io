@@ -59,10 +59,10 @@
             display: block;
         }
 
-        /* Full-width Discord Section */
+        /* Discord Section Styling */
         .discord-page {
-            text-align: center;
-            padding: 50px 20px;
+            text-align: left; /* Align text to the left */
+            padding: 50px 40px;
             background-color: rgba(30, 30, 30, 0.9);
             color: white;
             max-width: 800px;
@@ -82,27 +82,29 @@
             margin-bottom: 15px;
         }
 
+        /* Centered Discord Button */
+        .discord-button-container {
+            text-align: center; /* Centers the button */
+            margin-top: 20px;
+        }
+
+        /* Discord Button with GIF Background */
         .discord-invite-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 1.5rem;
             font-weight: bold;
             color: white;
-            background-color: #5865F2;
+            background: url('portl.gif') no-repeat center center;
+            background-size: cover;
             text-decoration: none;
             border-radius: 8px;
             transition: 0.3s;
+            border: 2px solid white;
         }
 
         .discord-invite-btn:hover {
-            background-color: #4752C4;
-        }
-
-        .discord-invite-btn img {
-            width: 30px;
-            vertical-align: middle;
-            margin-right: 10px;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -149,11 +151,12 @@
         <p>We share everything from game news 📰 to casual chat 💬, fun activities 🎮, and special giveaways 🎁!</p>
         <p>Don't miss out—join the fun now! ✨💥</p>
 
-        <!-- Join Discord Button Inside the Text Box -->
-        <a href="https://discord.gg/fZQwTvJm" class="discord-invite-btn" target="_blank">
-            <img src="ln.png" alt="Luminescent Network">
-            Join Our Discord! 🌟
-        </a>
+        <!-- Centered Join Discord Button -->
+        <div class="discord-button-container">
+            <a href="https://discord.gg/fZQwTvJm" class="discord-invite-btn" target="_blank">
+                Join Our Discord! 🌟
+            </a>
+        </div>
     </div>
 
     <!-- Footer -->
