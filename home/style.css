@@ -150,10 +150,11 @@ header img {
 }
 
 .staff-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
     gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
 }
 
 .staff-member {
