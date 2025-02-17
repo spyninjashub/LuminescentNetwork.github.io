@@ -58,10 +58,63 @@
         .show {
             display: block;
         }
+
+        /* Full-width Discord Section */
+        .discord-page {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            color: white;
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .discord-page h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .discord-page p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .discord-invite-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background-color: #5865F2;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .discord-invite-btn:hover {
+            background-color: #4752C4;
+        }
+
+        .discord-invite-btn img {
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- Sticky Navbar (EXACTLY like index.html) -->
+
+    <!-- Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="nptg.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Sticky Navbar -->
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="downloads.html" class="button">Go to Downloads</a>
@@ -87,24 +140,20 @@
         <img src="luminnet.png" alt="Luminescent Network">
     </header>
 
-    <!-- Discord Page Content -->
+    <!-- Full-width Discord Section -->
     <div class="discord-page">
-        <div class="left-side">
-            <h2>Why Join Our Discord?</h2>
-            <p>🚀 Stay connected with the Luminescent Network community! 🎮</p>
-            <p>Our Discord is the heart of the action! 💬</p>
-            <p>Join us for exclusive updates, events, and the chance to meet like-minded gamers and enthusiasts! 🎉🤩</p>
-            <br>
-            <p>We share everything from game news 📰 to casual chat 💬, fun activities 🎮, and special giveaways 🎁!</p>
-            <p>Don't miss out—join the fun now! ✨💥</p>
-        </div>
-        
-        <div class="right-side">
-            <a href="https://discord.gg/fZQwTvJm" class="discord-invite-btn" target="_blank">
-                <img src="ln.png" alt="Luminescent Network">
-                Join Our Discord! 🌟
-            </a>
-        </div>
+        <h2>Why Join Our Discord?</h2>
+        <p>🚀 Stay connected with the Luminescent Network community! 🎮</p>
+        <p>Our Discord is the heart of the action! 💬</p>
+        <p>Join us for exclusive updates, events, and the chance to meet like-minded gamers and enthusiasts! 🎉🤩</p>
+        <p>We share everything from game news 📰 to casual chat 💬, fun activities 🎮, and special giveaways 🎁!</p>
+        <p>Don't miss out—join the fun now! ✨💥</p>
+
+        <!-- Join Discord Button Inside the Text Box -->
+        <a href="https://discord.gg/fZQwTvJm" class="discord-invite-btn" target="_blank">
+            <img src="ln.png" alt="Luminescent Network">
+            Join Our Discord! 🌟
+        </a>
     </div>
 
     <!-- Footer -->
@@ -112,5 +161,6 @@
         <p>Luminescent Network &copy; 2025</p>
     </footer>
     <script src="script.js"></script>
+
 </body>
 </html>
