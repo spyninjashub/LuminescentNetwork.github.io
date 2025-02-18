@@ -110,35 +110,6 @@ header img {
     height: auto;
 }
 
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.carousel {
-    display: flex;
-    width: 400%;
-    animation: scroll 20s infinite linear;
-}
-
-.carousel img {
-    width: 100vw;
-    height: auto;
-    object-fit: cover;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(0); }
-    30% { transform: translateX(-100vw); }
-    55% { transform: translateX(-100vw); }
-    60% { transform: translateX(-200vw); }
-    85% { transform: translateX(-200vw); }
-    90% { transform: translateX(-300vw); }
-    100% { transform: translateX(-300vw); }
-}
-
 .staff-section {
     margin: 50px 0;
     text-align: center;
@@ -150,10 +121,11 @@ header img {
 }
 
 .staff-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
 }
 
 .staff-member {
@@ -162,7 +134,8 @@ header img {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -211,6 +184,30 @@ header img {
     color: #fff;
 }
 
+.staff-member p.staff-name:nth-child(1) {
+    color: #0099ff; /* Blue */
+}
+
+.staff-member p.staff-name:nth-child(2) {
+    color: #8a2be2; /* Blue-ish Purple */
+}
+
+.staff-member p.staff-name:nth-child(3) {
+    color: #9b59b6; /* Purple */
+}
+
+.staff-member p.staff-name:nth-child(4) {
+    color: #d500f9; /* Pinkish Purple */
+}
+
+.staff-member p.staff-name:nth-child(5) {
+    color: #e91e63; /* Pink */
+}
+
+.staff-member p.staff-name:nth-child(6) {
+    color: #808080; /* Grey */
+}
+
 .staff-member span {
     display: block;
     font-size: 14px;
@@ -229,6 +226,48 @@ header img {
     font-weight: bold;
     color: gold;
     margin-top: 5px;
+}
+
+.announcement-section {
+    margin-top: 40px;
+}
+
+.announcement-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.announcement-box {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.announcement-box img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.announcement-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.announcement-box p {
+    font-size: 18px;
+    color: #ccc;
 }
 
 .discord-page {
@@ -283,126 +322,3 @@ header img {
 }
 
 .discord-invite-btn:hover {
-    background-color: #5c6bc0;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-}
-
-.discord-invite-btn:active {
-    background-color: #4a5bb4;
-    transform: translateY(3px) scale(1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.discord-invite-btn img {
-    margin-right: 25px;
-    width: 50px;
-    border-radius: 10px;
-}
-
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    background: #0f0f0f;
-}
-
-audio {
-    display: none;
-}
-
-.downloads-page {
-    background: #111;
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-.downloads-page h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.downloads-page p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.download-btn-void-world {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background-color: #9b4de2;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.download-btn-void-world:hover {
-    background-color: #7c38b6;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(144, 0, 255, 0.6);
-}
-
-.download-btn-void-world:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 10px rgb(149, 0, 255);
-}
-
-.downloads-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.download-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.download-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}
-
-::selection {
-    background-color: rgba(217, 0, 112, 3.9);
-    color: white;
-}
-
-/* Announcement Section */
-.announcement {
-    background-color: #333; /* Dark Gray Background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white; /* Text Color */
-    margin-bottom: 20px;
-}
-
-.announcement h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.announcement p {
-    font-size: 1em;
-    margin-bottom: 15px;
-}
-
-.announcement-image {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-    height: auto;
-    display: block;
-    margin-top: 15px;
-}
