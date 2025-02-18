@@ -1,4 +1,113 @@
-height: auto;
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('font.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MinecraftTen', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.dropdown button:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header {
+    margin-top: 80px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
 }
 
 .carousel-container {
@@ -6,19 +115,16 @@ height: auto;
     overflow: hidden;
     margin-top: 20px;
 }
-
 .carousel {
     display: flex;
     width: 400%;
     animation: scroll 20s infinite linear;
 }
-
 .carousel img {
     width: 100vw;
     height: auto;
     object-fit: cover;
 }
-
 @keyframes scroll {
     0% { transform: translateX(0); }
     25% { transform: translateX(0); }
@@ -29,11 +135,14 @@ height: auto;
     90% { transform: translateX(-300vw); }
     100% { transform: translateX(-300vw); }
 }
-
 .staff-section {
-margin: 50px 0;
-text-align: center;
-@@ -150,10 +121,11 @@ header img {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.staff-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .staff-container {
@@ -42,68 +151,115 @@ text-align: center;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-gap: 20px;
+    gap: 20px;
     justify-items: center;
     margin-top: 30px;
 }
 
 .staff-member {
-@@ -162,7 +134,8 @@ header img {
-border-radius: 10px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
     width: 200px;
     width: 100%;
     max-width: 250px;
-position: relative;
-overflow: hidden;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-@@ -211,6 +184,30 @@ header img {
-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.staff-member::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 70%
+    );
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.staff-member:hover::before {
+    top: 100%;
+    left: 100%;
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2); 
+}
+
+.staff-member:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.staff-member p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .staff-member p.staff-name:nth-child(1) {
     color: #0099ff; /* Blue */
 }
-
 .staff-member p.staff-name:nth-child(2) {
     color: #8a2be2; /* Blue-ish Purple */
 }
-
 .staff-member p.staff-name:nth-child(3) {
     color: #9b59b6; /* Purple */
 }
-
 .staff-member p.staff-name:nth-child(4) {
     color: #d500f9; /* Pinkish Purple */
 }
-
 .staff-member p.staff-name:nth-child(5) {
     color: #e91e63; /* Pink */
 }
-
 .staff-member p.staff-name:nth-child(6) {
     color: #808080; /* Grey */
 }
-
 .staff-member span {
-display: block;
-font-size: 14px;
-@@ -231,6 +228,48 @@ header img {
-margin-top: 5px;
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.staff-member.creator {
+    border: 2px solid gold;
+    box-shadow: 0 0 15px gold;
+}
+
+.staff-member.creator::after {
+    content: "Website Creator";
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 5px;
 }
 
 .announcement-section {
     margin-top: 40px;
 }
-
 .announcement-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
 }
-
 .announcement-box {
     background-color: #2a2a2a;
     padding: 20px;
@@ -112,33 +268,73 @@ margin-top: 5px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .announcement-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-
 .announcement-box img {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
 .announcement-box h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 .announcement-box p {
     font-size: 18px;
     color: #ccc;
 }
-
 .discord-page {
-display: flex;
-justify-content: space-between;
-@@ -283,126 +322,3 @@ header img {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(rgba(26, 26, 26, 1), rgba(26, 26, 26, 0.8)), url('5.png') center/cover no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.left-side {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.discord-invite-btn {
+    display: inline-block;
+    padding: 50px 80px;
+    background-color: #7289DA;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
 }
 
 .discord-invite-btn:hover {
@@ -146,46 +342,38 @@ justify-content: space-between;
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
-
 .discord-invite-btn:active {
     background-color: #4a5bb4;
     transform: translateY(3px) scale(1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
-
 .discord-invite-btn img {
     margin-right: 25px;
     width: 50px;
     border-radius: 10px;
 }
-
 footer {
     margin-top: 30px;
     padding: 20px;
     background: #0f0f0f;
 }
-
 audio {
     display: none;
 }
-
 .downloads-page {
     background: #111;
     color: white;
     padding: 40px;
     text-align: center;
 }
-
 .downloads-page h2 {
     font-size: 40px;
     margin-bottom: 20px;
 }
-
 .downloads-page p {
     font-size: 18px;
     margin-bottom: 30px;
 }
-
 .download-btn-void-world {
     display: inline-block;
     padding: 15px 30px;
@@ -198,25 +386,21 @@ audio {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
-
 .download-btn-void-world:hover {
     background-color: #7c38b6;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(144, 0, 255, 0.6);
 }
-
 .download-btn-void-world:active {
     transform: translateY(2px);
     box-shadow: 0 4px 10px rgb(149, 0, 255);
 }
-
 .downloads-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
-
 .download-item {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -226,17 +410,14 @@ audio {
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .download-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
-
 ::selection {
     background-color: rgba(217, 0, 112, 3.9);
     color: white;
 }
-
 /* Announcement Section */
 .announcement {
     background-color: #333; /* Dark Gray Background */
@@ -246,17 +427,14 @@ audio {
     color: white; /* Text Color */
     margin-bottom: 20px;
 }
-
 .announcement h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
-
 .announcement p {
     font-size: 1em;
     margin-bottom: 15px;
 }
-
 .announcement-image {
     width: 100%;
     max-width: 100%;
