@@ -184,28 +184,10 @@ header img {
     color: #fff;
 }
 
-.staff-member p.staff-name:nth-child(1) {
-    color: #0099ff; /* Blue */
-}
-
-.staff-member p.staff-name:nth-child(2) {
-    color: #8a2be2; /* Blue-ish Purple */
-}
-
-.staff-member p.staff-name:nth-child(3) {
-    color: #9b59b6; /* Purple */
-}
-
-.staff-member p.staff-name:nth-child(4) {
-    color: #d500f9; /* Pinkish Purple */
-}
-
-.staff-member p.staff-name:nth-child(5) {
-    color: #e91e63; /* Pink */
-}
-
-.staff-member p.staff-name:nth-child(6) {
-    color: #808080; /* Grey */
+.staff-member p.staff-name {
+    background: -webkit-linear-gradient(left, #0099ff, #9b59b6, #e91e63, #ff6347, #gray);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .staff-member span {
@@ -288,37 +270,4 @@ header img {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-right: 20px;
-}
-
-.right-side {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.discord-invite-btn {
-    display: inline-block;
-    padding: 50px 80px;
-    background-color: #7289DA;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 15px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 120px;
-    position: relative;
-    overflow: hidden;
-}
-
-.discord-invite-btn:hover {
+    box-shadow: 0 4px 10px rgba(0,
